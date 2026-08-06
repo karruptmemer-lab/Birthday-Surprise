@@ -1,0 +1,290 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+width:100%;
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#000;
+}
+
+.hero{
+position:relative;
+width:100%;
+height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.55)),
+url("photos/background.jpg");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+animation: kenBurns 25s ease-in-out infinite alternate;
+}
+
+.overlay{
+position:absolute;
+inset:0;
+backdrop-filter:blur(2px);
+background:rgba(0,0,0,.15);
+}
+
+.hero-content{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+color:#fff;
+width:90%;
+max-width:800px;
+z-index:2;
+}
+
+.date{
+font-size:15px;
+letter-spacing:6px;
+margin-bottom:20px;
+opacity:.9;
+}
+
+.hero h1{
+font-size:70px;
+font-family:cursive;
+margin-bottom:20px;
+text-shadow:0 0 20px rgba(255,255,255,.5);
+}
+
+.hero p{
+font-size:20px;
+line-height:1.8;
+max-width:700px;
+margin:auto;
+margin-bottom:40px;
+color:#f4f4f4;
+}
+
+#startBtn{
+padding:18px 45px;
+font-size:18px;
+font-weight:600;
+border:none;
+border-radius:50px;
+cursor:pointer;
+color:#fff;
+background:linear-gradient(135deg,#ff8a9e,#ff5f7e);
+box-shadow:0 10px 30px rgba(255,105,135,.4);
+transition:.35s;
+animation:pulse 2s infinite;
+}
+
+#startBtn:hover{
+transform:translateY(-4px) scale(1.05);
+box-shadow:0 15px 40px rgba(255,105,135,.6);
+}
+
+@keyframes pulse{
+0%,100%{
+transform:scale(1);
+}
+50%{
+transform:scale(1.05);
+}
+}
+
+#startBtn:hover{
+transform:scale(1.08);
+background:#e4c08c;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+#startBtn{
+font-size:16px;
+padding:15px 30px;
+}
+
+}
+#stars,
+#particles{
+position:absolute;
+inset:0;
+overflow:hidden;
+pointer-events:none;
+z-index:1;
+}
+
+.star{
+position:absolute;
+width:3px;
+height:3px;
+background:white;
+border-radius:50%;
+opacity:.2;
+animation:twinkle 2s infinite ease-in-out;
+}
+
+.particle{
+position:absolute;
+bottom:-20px;
+width:6px;
+height:6px;
+background:rgba(255,255,255,.5);
+border-radius:50%;
+animation:floatUp linear infinite;
+}
+
+@keyframes twinkle{
+0%,100%{
+opacity:.2;
+transform:scale(1);
+}
+50%{
+opacity:1;
+transform:scale(1.8);
+}
+}
+
+@keyframes floatUp{
+0%{
+transform:translateY(0);
+opacity:0;
+}
+20%{
+opacity:.8;
+}
+100%{
+transform:translateY(-110vh);
+opacity:0;
+}
+}
+/* ✨ Bokeh Lights */
+
+#bokeh{
+position:fixed;
+inset:0;
+overflow:hidden;
+pointer-events:none;
+z-index:1;
+}
+
+.bokeh{
+position:absolute;
+border-radius:50%;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(4px);
+animation:bokehFloat linear infinite;
+}
+
+@keyframes bokehFloat{
+
+0%{
+transform:translateY(110vh) scale(.5);
+opacity:0;
+}
+
+20%{
+opacity:.5;
+}
+
+100%{
+transform:translateY(-20vh) scale(1.3);
+opacity:0;
+}
+
+}
+/* ✨ Hanging Fairy Lights */
+
+#fairyLights{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:120px;
+pointer-events:none;
+z-index:3;
+overflow:hidden;
+}
+
+.light-string{
+position:absolute;
+top:0;
+width:2px;
+background:rgba(255,255,255,.15);
+transform-origin:top center;
+animation:swing 4s ease-in-out infinite;
+}
+
+.bulb{
+position:absolute;
+bottom:-10px;
+left:50%;
+transform:translateX(-50%);
+width:12px;
+height:12px;
+border-radius:50%;
+background:#FFD54F;
+box-shadow:
+0 0 10px #FFD54F,
+0 0 20px #FFD54F,
+0 0 35px #FFE082;
+animation:blinkLight 2s infinite;
+}
+
+@keyframes swing{
+
+0%,100%{
+transform:rotate(-5deg);
+}
+
+50%{
+transform:rotate(5deg);
+}
+
+}
+
+@keyframes blinkLight{
+
+0%,100%{
+opacity:.6;
+}
+
+50%{
+opacity:1;
+}
+}
+@keyframes kenBurns{
+
+0%{
+    background-size:100%;
+    background-position:center;
+}
+
+50%{
+    background-size:108%;
+    background-position:center top;
+}
+
+100%{
+    background-size:115%;
+    background-position:center;
+}
+
+}
