@@ -116,11 +116,12 @@ display:none;
 }
 
 #finalMessage{
-
-margin-top:35px;
-
-animation:fade 1s ease;
-
+    margin-top:35px;
+    padding:20px;
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(8px);
+    border-radius:20px;
+    animation:fade 1s ease;
 }
 
 #finalMessage h2{
@@ -134,11 +135,11 @@ color:#FFD54F;
 }
 
 #finalMessage p{
-
-font-size:20px;
-
-line-height:1.8;
-
+    font-size:20px;
+    line-height:1.8;
+    color:#ffffff;
+    text-shadow:0 2px 8px rgba(0,0,0,.9);
+    font-weight:600;
 }
 
 @keyframes fade{
@@ -263,24 +264,30 @@ z-index:999;
 @media (max-width:768px){
 
     body{
-        align-items:flex-start;
+        align-items:center;
         padding:20px 10px;
     }
 
     .container{
-        width:100%;
-        max-width:100%;
+        width:95%;
+        max-width:500px;
         margin:20px auto;
-        padding:20px;
+        padding:25px 20px;
     }
 
-    .container h1{
+    h1{
+        font-size:34px;
+    }
+
+    #finalMessage h2{
         font-size:32px;
     }
 
-    .container p{
-        font-size:16px;
-        line-height:1.6;
+    .container p,
+    #finalMessage p{
+        font-size:18px;
+        color:#fff;
+        text-shadow:0 2px 8px rgba(0,0,0,.9);
     }
 
     .gift{
@@ -288,8 +295,8 @@ z-index:999;
     }
 
     .footer-credit{
-        font-size:14px;
         margin-top:25px;
+        font-size:14px;
     }
 }
 @media (max-width: 768px){
