@@ -220,3 +220,39 @@ z-index:999;
     }
 
 }
+/* Mobile Responsive */
+@media (max-width: 768px){
+
+    .container{
+        width: 92%;
+        max-width: 92%;
+        padding: 25px 20px;
+        margin: 20px auto;
+    }
+
+    h1{
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    h2{
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .container p{
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+    .gift{
+        font-size: 90px;
+    }
+
+    .footer-credit{
+        margin-top: 25px;
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: center;
+    }
+}
