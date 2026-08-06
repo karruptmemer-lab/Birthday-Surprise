@@ -1,8 +1,8 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
 }
 
 body{
@@ -12,13 +12,13 @@ body{
 
     display:flex;
     flex-direction:column;
-    justify-content:flex-start;
     align-items:center;
+    justify-content:flex-start;
 
     padding:20px 10px;
 
     background:
-    linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)),
+    linear-gradient(rgba(0,0,0,.70),rgba(0,0,0,.70)),
     url("background.jpg");
 
     background-size:cover;
@@ -27,163 +27,89 @@ body{
     background-attachment:fixed;
 }
 
-background-size:cover;
-background-position:center;
-}
-
 .container{
     width:100%;
     max-width:550px;
+
     margin:20px auto;
-    padding:25px 20px;
-    background:rgba(0,0,0,0.35);
+
+    padding:30px 25px;
+
+    text-align:center;
+
+    background:rgba(0,0,0,.45);
     backdrop-filter:blur(10px);
     -webkit-backdrop-filter:blur(10px);
+
     border-radius:20px;
-    text-align:center;
+
     color:#fff;
-    box-shadow:0 8px 30px rgba(0,0,0,0.4);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
 }
 
-h1{
-
-font-size:42px;
-
-margin-bottom:15px;
-
+.container h1{
+    font-size:42px;
+    margin-bottom:15px;
+    color:#fff;
+    text-shadow:0 2px 8px rgba(0,0,0,.8);
 }
 
 .container p{
-
-font-size:18px;
-
-margin-bottom:35px;
-
-line-height:1.7;
-
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:30px;
+    color:#fff;
+    text-shadow:0 2px 8px rgba(0,0,0,.8);
 }
 
 .gift{
-
-font-size:130px;
-
-cursor:pointer;
-
-display:inline-block;
-
-animation:shake 2s infinite;
-
-transition:.4s;
-
-user-select:none;
-
+    font-size:120px;
+    cursor:pointer;
+    display:inline-block;
+    user-select:none;
+    animation:shake 2s infinite;
+    transition:.3s;
 }
 
 .gift:hover{
-
-transform:scale(1.12);
-
-}
-
-@keyframes shake{
-
-0%,100%{
-transform:rotate(0deg);
-}
-
-20%{
-transform:rotate(-8deg);
-}
-
-40%{
-transform:rotate(8deg);
-}
-
-60%{
-transform:rotate(-6deg);
-}
-
-80%{
-transform:rotate(6deg);
-}
-
+    transform:scale(1.1);
 }
 
 .hidden{
-
-display:none;
-
+    display:none;
 }
 
 #finalMessage{
-    margin-top:35px;
+    margin-top:30px;
     padding:20px;
     background:rgba(0,0,0,.45);
+    border-radius:18px;
     backdrop-filter:blur(8px);
-    border-radius:20px;
-    animation:fade 1s ease;
 }
 
 #finalMessage h2{
-
-font-size:38px;
-
-margin-bottom:20px;
-
-color:#FFD54F;
-
+    color:#FFD54F;
+    font-size:38px;
+    margin-bottom:15px;
+    text-shadow:0 2px 8px rgba(0,0,0,.8);
 }
 
 #finalMessage p{
+    color:#fff;
     font-size:20px;
-    line-height:1.8;
-    color:#ffffff;
-    text-shadow:0 2px 8px rgba(0,0,0,.9);
-    font-weight:600;
+    line-height:1.9;
+    text-shadow:0 2px 8px rgba(0,0,0,.8);
+}
+@keyframes shake{
+    0%,100%{transform:rotate(0deg);}
+    20%{transform:rotate(-8deg);}
+    40%{transform:rotate(8deg);}
+    60%{transform:rotate(-6deg);}
+    80%{transform:rotate(6deg);}
 }
 
 @keyframes fade{
-
-from{
-opacity:0;
-transform:translateY(25px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-#hearts{
-
-position:fixed;
-
-inset:0;
-
-pointer-events:none;
-
-overflow:hidden;
-
-z-index:999;
-
-}
-.footer-credit{
-    width:100%;
-    max-width:550px;
-    margin:25px auto 0;
-    text-align:center;
-    color:rgba(255,255,255,.85);
-    font-size:16px;
-    line-height:1.8;
-    animation:fadeIn 2s ease;
-}
-
-.footer-credit strong{
-    color:#ffd166;
-}
-
-@keyframes fadeIn{
     from{
         opacity:0;
         transform:translateY(20px);
@@ -193,140 +119,67 @@ z-index:999;
         transform:translateY(0);
     }
 }
-@media (max-width: 768px){
 
-    .container{
-        width:95%;
-        max-width:95%;
-        padding:25px 18px;
-        margin:20px auto;
-    }
-
-    h1{
-        font-size:40px;
-        line-height:1.2;
-    }
-
-    h2{
-        font-size:30px;
-        line-height:1.2;
-    }
-
-    p{
-        font-size:18px;
-        line-height:1.7;
-    }
-
-    .footer-credit{
-        position:static;
-        margin-top:30px;
-        text-align:center;
-        font-size:14px;
-    }
-
+#hearts{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:999;
 }
-/* Mobile Responsive */
-@media (max-width: 768px){
 
-    .container{
-        width: 92%;
-        max-width: 92%;
-        padding: 25px 20px;
-        margin: 20px auto;
-    }
-
-    h1{
-        font-size: 36px;
-        line-height: 1.2;
-    }
-
-    h2{
-        font-size: 28px;
-        line-height: 1.2;
-    }
-
-    .container p{
-        font-size: 18px;
-        line-height: 1.7;
-    }
-
-    .gift{
-        font-size: 90px;
-    }
-
-    .footer-credit{
-        margin-top: 25px;
-        font-size: 14px;
-        line-height: 1.6;
-        text-align: center;
-    }
+.footer-credit{
+    width:100%;
+    max-width:550px;
+    margin:25px auto;
+    text-align:center;
+    color:rgba(255,255,255,.9);
+    font-size:15px;
+    line-height:1.8;
+    text-shadow:0 2px 6px rgba(0,0,0,.8);
 }
+
+.footer-credit strong{
+    color:#FFD54F;
+}
+
 @media (max-width:768px){
 
     body{
-        align-items:center;
-        padding:20px 10px;
+        padding:15px 10px;
     }
 
     .container{
         width:95%;
-        max-width:500px;
-        margin:20px auto;
-        padding:25px 20px;
-    }
-
-    h1{
-        font-size:34px;
-    }
-
-    #finalMessage h2{
-        font-size:32px;
-    }
-
-    .container p,
-    #finalMessage p{
-        font-size:18px;
-        color:#fff;
-        text-shadow:0 2px 8px rgba(0,0,0,.9);
-    }
-
-    .gift{
-        font-size:90px;
-    }
-
-    .footer-credit{
-        margin-top:25px;
-        font-size:14px;
-    }
-}
-@media (max-width: 768px){
-
-    .container{
-        width:95%;
-        padding:20px 15px;
+        padding:22px 18px;
         margin:15px auto;
     }
 
     .container h1{
-        font-size:38px;
-        line-height:1.2;
-    }
-
-    .container h2{
         font-size:34px;
     }
 
     .container p{
-        font-size:20px;
-        line-height:1.8;
+        font-size:18px;
+        line-height:1.7;
     }
 
     .gift{
         font-size:90px;
     }
 
+    #finalMessage h2{
+        font-size:30px;
+    }
+
+    #finalMessage p{
+        font-size:18px;
+        line-height:1.8;
+    }
+
     .footer-credit{
-        font-size:14px;
+        font-size:13px;
         margin-top:20px;
+        margin-bottom:20px;
     }
 }
