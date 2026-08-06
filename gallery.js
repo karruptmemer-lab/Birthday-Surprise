@@ -1,8 +1,8 @@
 const photos = [
-    "photos/1.jpeg",
-    "photos/2.jpeg",
-    "photos/3.jpeg",
-    "photos/4.jpeg"
+    "1.jpeg",
+    "2.jpeg",
+    "3.jpeg",
+    "4.jpeg"
 ];
 
 const captions = [
