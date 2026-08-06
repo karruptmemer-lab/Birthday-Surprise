@@ -188,3 +188,35 @@ z-index:999;
         transform:translateY(0);
     }
 }
+@media (max-width: 768px){
+
+    .container{
+        width:95%;
+        max-width:95%;
+        padding:25px 18px;
+        margin:20px auto;
+    }
+
+    h1{
+        font-size:40px;
+        line-height:1.2;
+    }
+
+    h2{
+        font-size:30px;
+        line-height:1.2;
+    }
+
+    p{
+        font-size:18px;
+        line-height:1.7;
+    }
+
+    .footer-credit{
+        position:static;
+        margin-top:30px;
+        text-align:center;
+        font-size:14px;
+    }
+
+}
