@@ -6,15 +6,24 @@ font-family:Poppins,sans-serif;
 }
 
 body{
-height:100vh;
-overflow:hidden;
-display:flex;
-justify-content:center;
-align-items:center;
+    min-height:100vh;
+    overflow-x:hidden;
+    overflow-y:auto;
 
-background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.55)),
-url("background.jpg");
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+
+    padding:20px 10px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.55)),
+    url("background.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
 
 background-size:cover;
 background-position:center;
@@ -254,5 +263,37 @@ z-index:999;
         font-size: 14px;
         line-height: 1.6;
         text-align: center;
+    }
+}
+@media (max-width:768px){
+
+    body{
+        align-items:flex-start;
+        padding:20px 10px;
+    }
+
+    .container{
+        width:100%;
+        max-width:100%;
+        margin:20px auto;
+        padding:20px;
+    }
+
+    .container h1{
+        font-size:32px;
+    }
+
+    .container p{
+        font-size:16px;
+        line-height:1.6;
+    }
+
+    .gift{
+        font-size:90px;
+    }
+
+    .footer-credit{
+        font-size:14px;
+        margin-top:25px;
     }
 }
