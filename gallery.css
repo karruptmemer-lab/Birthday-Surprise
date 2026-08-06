@@ -194,3 +194,21 @@ transform:scale(.96);
 }
 
 }
+.nextBtn{
+    margin-top:20px;
+    padding:14px 32px;
+    background:#ff5e8a;
+    color:#fff;
+    border:none;
+    border-radius:40px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 8px 20px rgba(255,94,138,.4);
+}
+
+.nextBtn:hover{
+    transform:scale(1.05);
+    background:#ff3d7a;
+}
