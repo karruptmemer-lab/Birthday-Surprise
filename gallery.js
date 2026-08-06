@@ -116,4 +116,4 @@ setTimeout(() => {
 
     goNext("cake.html");
 
-}, 15000);
+}, 60000);
